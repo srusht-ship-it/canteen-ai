@@ -1,0 +1,16 @@
+.cart-item {
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.cart-item:hover {
+  background-color: #f8f9fa;
+}
+
+.cart-item-image {
+  flex-shrink: 0;
+}
+
+.offcanvas {
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,642 @@
+/* Login Page Styles */
+.login-page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background pattern for desktop */
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(40, 167, 69, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.login-page::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(45, 122, 69, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.login-card {
+  border-radius: 24px;
+  background: #ffffff;
+  animation: fadeInUp 0.5s ease-out;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Desktop Enhancements */
+@media (min-width: 768px) {
+  .login-page {
+    padding: 60px 40px;
+  }
+
+  .login-card {
+    max-width: 520px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  }
+
+  .login-card .card-body {
+    padding: 3rem 3.5rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .login-card {
+    max-width: 580px;
+  }
+
+  .login-card .card-body {
+    padding: 3.5rem 4rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-card {
+    max-width: 640px;
+  }
+
+  .login-card .card-body {
+    padding: 4rem 4.5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .login-card {
+    max-width: 700px;
+  }
+
+  .login-card .card-body {
+    padding: 4.5rem 5rem !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo Styles */
+.logo-container {
+  width: 70px;
+  height: 70px;
+  background-color: #f8f3ed;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.brand-name {
+  color: #2c3e50;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Desktop Logo Enhancements */
+@media (min-width: 768px) {
+  .logo-container {
+    width: 85px;
+    height: 85px;
+    border-radius: 18px;
+  }
+
+  .logo-icon {
+    font-size: 40px;
+  }
+
+  .brand-name {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-container {
+    width: 95px;
+    height: 95px;
+    border-radius: 20px;
+  }
+
+  .logo-icon {
+    font-size: 44px;
+  }
+
+  .brand-name {
+    font-size: 2.5rem;
+  }
+}
+
+/* Form Input Styles */
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  z-index: 10;
+}
+
+.input-with-icon .form-control {
+  background-color: #f8f3ed;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 20px;
+  padding-left: 52px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  height: 56px;
+}
+
+.input-with-icon .form-control:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+  outline: none;
+}
+
+.input-with-icon .form-control::placeholder {
+  color: #adb5bd;
+}
+
+/* Form Labels */
+.form-label {
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Desktop Form Enhancements */
+@media (min-width: 768px) {
+  .input-with-icon .form-control {
+    height: 62px;
+    font-size: 1.05rem;
+    padding: 19px 24px;
+    padding-left: 58px;
+    border-radius: 16px;
+  }
+
+  .input-icon {
+    left: 22px;
+  }
+
+  .input-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .form-label {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+
+  .form-group, .mb-3 {
+    margin-bottom: 1.75rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .input-with-icon .form-control {
+    height: 66px;
+    font-size: 1.1rem;
+    padding: 20px 26px;
+    padding-left: 62px;
+    border-radius: 18px;
+  }
+
+  .input-icon {
+    left: 24px;
+  }
+
+  .input-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .form-label {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .form-group, .mb-3 {
+    margin-bottom: 2rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .input-with-icon .form-control {
+    height: 70px;
+    font-size: 1.15rem;
+  }
+
+  .form-label {
+    font-size: 1.15rem;
+  }
+}
+
+/* Forgot Password Link */
+.forgot-link {
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #28a745 !important;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+  border-radius: 14px;
+  font-size: 1.1rem;
+  background-color: #2d7a45;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px !important;
+  height: 56px;
+  font-weight: 600;
+}
+
+.sign-in-btn:hover {
+  background-color: #246438;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(45, 122, 69, 0.35);
+}
+
+.sign-in-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Desktop Button Enhancements */
+@media (min-width: 768px) {
+  .sign-in-btn {
+    height: 62px;
+    font-size: 1.15rem;
+    border-radius: 16px;
+    padding: 19px 30px !important;
+  }
+
+  .sign-in-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .sign-in-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(45, 122, 69, 0.4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .sign-in-btn {
+    height: 66px;
+    font-size: 1.2rem;
+    border-radius: 18px;
+    padding: 20px 32px !important;
+  }
+
+  .sign-in-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sign-in-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(45, 122, 69, 0.45);
+  }
+}
+
+@media (min-width: 1400px) {
+  .sign-in-btn {
+    height: 70px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Divider */
+.divider-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+.divider-text {
+  padding: 0 16px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Desktop Divider Enhancements */
+@media (min-width: 768px) {
+  .divider-container {
+    margin: 2rem 0;
+  }
+
+  .divider-text {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
+
+/* Social Login Buttons */
+.social-btn {
+  border-radius: 14px;
+  border: 2px solid #dee2e6;
+  color: #2c3e50;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px !important;
+  height: 52px;
+  font-size: 1rem;
+}
+
+.social-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #28a745;
+  color: #28a745;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* Desktop Social Button Enhancements */
+@media (min-width: 768px) {
+  .social-btn {
+    height: 60px;
+    font-size: 1.05rem;
+    border-radius: 16px;
+    padding: 17px 26px !important;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (min-width: 1200px) {
+  .social-btn {
+    height: 64px;
+    font-size: 1.1rem;
+    border-radius: 18px;
+    padding: 18px 28px !important;
+  }
+
+  .social-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .social-btn {
+    height: 68px;
+    font-size: 1.15rem;
+  }
+}
+
+/* Create Account Link */
+.create-account-link {
+  color: #28a745;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.create-account-link:hover {
+  color: #1e7e34;
+  text-decoration: underline !important;
+}
+
+/* Desktop Text Enhancements */
+@media (min-width: 768px) {
+  .login-card h2 {
+    font-size: 2.25rem !important;
+    margin-bottom: 1.25rem !important;
+    letter-spacing: -0.5px;
+  }
+
+  .login-card .text-muted {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .create-account-link,
+  .forgot-link {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-card h2 {
+    font-size: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .login-card .text-muted {
+    font-size: 1.15rem;
+  }
+
+  .create-account-link,
+  .forgot-link {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .login-card h2 {
+    font-size: 2.75rem !important;
+  }
+
+  .login-card .text-muted {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .login-card .card-body {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-btn {
+    font-size: 0.9rem;
+    padding: 10px 8px;
+  }
+
+  .social-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Dietary Preferences Styles */
+.dietary-preferences {
+  margin-top: 10px;
+}
+
+.dietary-btn {
+  background-color: #f8f3ed;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dietary-btn:hover {
+  background-color: #e9e4db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dietary-btn.active {
+  background-color: #e8f5e9;
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.dietary-icon {
+  font-size: 18px;
+}
+
+/* Desktop Dietary Buttons */
+@media (min-width: 768px) {
+  .dietary-btn {
+    padding: 15px 26px;
+    font-size: 1.05rem;
+    border-radius: 14px;
+  }
+
+  .dietary-icon {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dietary-btn {
+    padding: 16px 28px;
+    font-size: 1.1rem;
+    border-radius: 16px;
+  }
+
+  .dietary-icon {
+    font-size: 24px;
+  }
+}
+
+/* Password Info Styling */
+.password-info {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+@media (min-width: 768px) {
+  .password-info {
+    padding: 16px 20px;
+    border-radius: 14px;
+  }
+
+  .password-info small {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .password-info {
+    padding: 18px 22px;
+    border-radius: 16px;
+  }
+
+  .password-info small {
+    font-size: 1.05rem;
+  }
+}
+
+/* Additional Utilities */
+.fw-semibold {
+  font-weight: 600;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input {
+  transition: all 0.3s ease;
+}

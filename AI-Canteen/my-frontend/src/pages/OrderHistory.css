@@ -1,0 +1,19 @@
+.order-card {
+  transition: box-shadow 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-details small {
+  display: flex;
+  align-items: center;
+}
+
+.order-items {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+}
